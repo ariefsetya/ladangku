@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::get('admin/farmer',['as'=>'allFarmer','uses'=>'AdminController@farmer_all']);
