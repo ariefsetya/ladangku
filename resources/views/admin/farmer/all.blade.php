@@ -1,15 +1,19 @@
-@extends('app')
+@extends('appadmin')
 
-@section('title') All Farmer @endsection
+@section('title') Semua Data Petani @endsection
 
 @section('body')
 
+<hr><div class="pull-right"><a class="addnew" href="{{route('farmer.create')}}">Tambah Data Petani</a></div>
+<h1>Semua Data Petani</h1>
+<hr>
 <table class="table">
 	<thead>
 		<tr>
 			<th>NIK</th>
-			<th>Name</th>
-			<th>Phone</th>
+			<th>Nama</th>
+			<th>Nomor HP</th>
+			<th>Alamat</th>
 			<th colspan="2">Action</th>
 		</tr>
 	</thead>
@@ -19,8 +23,10 @@
 			<td>{{$data->nik}}</td>
 			<td>{{$data->name}}</td>
 			<td>{{$data->phone}}</td>
-			<td><a href="{!!route('editFarmer',[$data->id])!!}">Edit</a></td>
-			<td><a href="{!!route('deleteFarmer',[$data->id])!!}" onclick="return confirm('Are you sure to delete farmer {{$data->name}}?')">Delete</a></td>
+			<td>{{$data->address}}</td>
+			<td><a class="button" href="{!!route('farmer.edit',[$data->id])!!}">Ubah</a></td>
+			<td><form method="POST" action="{!!route('farmer.destroy',[$data->id])!!}">
+				<input type="hidden" name="_method" value="DELETE">{{csrf_field()}}<input type="submit" class="delete" onclick="return confirm('Are you sure to delete farmer {{$data->name}}?')" value="Hapus"></form></td>
 		</tr>		
 	@endforeach
 	</tbody>

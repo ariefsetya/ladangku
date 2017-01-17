@@ -18,14 +18,13 @@ class CreateMyProductsTable extends Migration
             $table->integer('id_farmer');
             $table->integer('id_product');
             $table->double('modal',11,2);
-            $table->double('price',11,2);
+            $table->double('price_per_units',11,2);
             $table->date('plant_date');
-            $table->date('harvest_date');
+            $table->date('harvest_date_predict');
+            $table->date('harvest_date')->nullable();
             $table->string('harvest_status');
-            $table->integer('plant_amount');
             $table->integer('harvest_amount');
             $table->string('units');
-            $table->string('needs');
             $table->timestamps();
         });
     }

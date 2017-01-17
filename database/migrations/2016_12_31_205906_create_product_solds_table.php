@@ -16,8 +16,11 @@ class CreateProductSoldsTable extends Migration
         Schema::create('product_solds', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_farmer');
+            $table->integer('id_harvest');
             $table->integer('id_product');
             $table->integer('id_customer');
+            $table->integer('amount');
+            $table->string('units');
             $table->double('price',11,2);
             $table->double('profit',11,2);
             $table->timestamps();

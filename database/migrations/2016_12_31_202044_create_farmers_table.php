@@ -20,6 +20,7 @@ class CreateFarmersTable extends Migration
             $table->text('address');
             $table->string('phone');
             $table->string('pin');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

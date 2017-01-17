@@ -1,12 +1,14 @@
-@extends('app')
+@extends('appadmin')
 
-@section('title') Add Farmer @endsection
+@section('title') Tambah Data Petani @endsection
 
 @section('body')
-
-<form method="POST" action="{{route('saveFarmer')}}">
+<hr><div class="pull-right"><a class="addnew" href="{{route('farmer.index')}}">Semua Data Petani</a></div>
+<h1>Tambah Data Petani</h1>
+<hr>
+<form method="POST" action="{{route('farmer.store')}}">
 	{{csrf_field()}}
-	@include('_form')
+	@include('admin.farmer._form')
 </form>
 
 @endsection

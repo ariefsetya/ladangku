@@ -17,7 +17,8 @@ class CreateUnitConvsTable extends Migration
             $table->increments('id');
             $table->string('from_unit');
             $table->string('to_unit');
-            $table->double('ratio');
+            $table->double('from_amount');
+            $table->double('to_amount');
             $table->timestamps();
         });
     }

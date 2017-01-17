@@ -1,30 +1,32 @@
-<strong>Basic Identity</strong>
-<table>
+<hr>
+<strong>Identitas Dasar</strong>
+<hr>
+<table class="table">
 	<tr>
-		<td>Identity Number</td>
-		<td><input type="text" name="nik" value="{{$farmer->nik or ''}}"></td>
+		<td style="width: 30%;">Nomor Identitas</td>
+		<td><input required type="text" name="nik" value="{{$nik or ''}}" placeholder="Contoh : 31750431xxxx"></td>
 	</tr>
 	<tr>
-		<td>Name</td>
-		<td><input type="text" name="name" value="{{$farmer->name or ''}}"></td>
+		<td>Nama</td>
+		<td><input required type="text" name="name" value="{{$name or ''}}" placeholder="Contoh : John Doe"></td>
 	</tr>
 	<tr>
-		<td>Address</td>
-		<td><textarea type="text" name="address">{{$farmer->address or ''}}</textarea></td>
+		<td>Alamat</td>
+		<td><textarea required type="text" name="address" placeholder="Contoh : Jalan Raya Bogor No. 81A">{{$address or ''}}</textarea></td>
 	</tr>
-</table>
-<strong>Account Info</strong>
-<table>
+</table><hr>
+<strong>Info Akun</strong><hr>
+<table class="table">
 	<tr>
-		<td>Phone Number</td>
-		<td><input type="text" name="phone" value="{{$farmer->phone or ''}}"></td>
+		<td style="width: 30%;">Nomor HP</td>
+		<td><input required type="text" name="phone" value="{{$phone or ''}}" placeholder="format : +628387xxxxx"></td>
 	</tr>
 	<tr>
 		<td>PIN</td>
-		<td><input type="text" name="pin" value="{{$farmer->pin or ''}}"></td>
+		<td><input required type="text" name="pin" value="{{$pin or ''}}" minlength="4" maxlength="4" placeholder="Contoh: 1234"></td>
 	</tr>
 	<tr>
 		<td></td>
-		<td><button type="submit">Save</button></td>
+		<td><input type="submit" value="Simpan"></td>
 	</tr>
 </table>
