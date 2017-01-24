@@ -25,9 +25,9 @@
 		<tr>
 			<td><input type="hidden" id="id_material_{{$i}}" name="id_material[]" value="{{$key->id}}">
 			<input type="text" readonly name="material[]" value="{{$key->name}}"></td>
-			<td><input type="number" oninput="hitung({{$i}})" id="amount_{{$i}}" name="amount[]" value="" placeholder="Contoh : 10"></td>
+			<td><input type="number" oninput="hitung({{$i}})" id="amount_{{$i}}" name="amount[]" value="0" required placeholder="Contoh : 10"></td>
 			<td><input type="text" name="units[]" readonly value="{{$key->units}}" placeholder="Contoh : kg"></td>
-			<td><input type="number" oninput="hitung({{$i}})" id="price_{{$i}}" name="price[]" value="" placeholder="Contoh : 10000"></td>
+			<td><input type="number" required oninput="hitung({{$i}})" id="price_{{$i}}" name="price[]" value="0" placeholder="Contoh : 10000"></td>
 			<td><input type="number" readonly id="total_{{$i}}" name="total[]" value="0"></td>
 		</tr>
 		<?php $i++;?>

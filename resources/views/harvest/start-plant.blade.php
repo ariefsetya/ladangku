@@ -20,11 +20,11 @@
 	</tr>
 	<tr>
 		<td>Mulai Penanaman</td>
-		<td><input type="text" class="for_date" name="plant_date"></td>
+		<td><input type="text" class="for_date" name="plant_date" required></td>
 	</tr>
 	<tr>
 		<td>Perkiraan Panen</td>
-		<td><input type="text" class="for_date" name="harvest_date_predict"></td>
+		<td><input type="text" class="for_date" name="harvest_date_predict" required></td>
 	</tr>
 	<tr>
 		<td></td>
